@@ -10,5 +10,4 @@ feature 'Viewing Links' do
     end
 
   end
-
 end

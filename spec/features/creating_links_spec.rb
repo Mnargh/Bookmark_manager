@@ -9,7 +9,7 @@ feature 'Creating Links' do
     within 'ul#links' do
       expect(page).to have_content('Youtube')
     end
-    
+
   end
 
 end

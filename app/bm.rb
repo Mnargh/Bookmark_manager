@@ -13,7 +13,8 @@ class BM < Sinatra::Base
   end
 
   post '/links' do
-
+    Link.create(title: params[:title], url: params[:url])
+    redirect '/links'
   end
 
   run! if app_file == $0

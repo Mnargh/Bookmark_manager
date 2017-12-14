@@ -18,7 +18,9 @@ class BM < Sinatra::Base
   end
 
   get '/tags/:search_tag' do
-    @links_with_tag = Link.all(:tags => (Link.all.tags(:name => "#{params[:search_tag]}")))
+    # @links_with_tag = Link.all(:tags => (Link.all.tags(:name => "#{params[:search_tag]}")))
+    tag = Tag.first(name: params[:search_tag])
+    @links_with_tag = tag ? tag.links : []
     erb(:tag_name)
   end
 

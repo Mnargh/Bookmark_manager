@@ -13,6 +13,19 @@ class BM < Sinatra::Base
     erb(:links)
   end
 
+  post '/tags/search_tag' do
+    redirect "/tags/#{params[:tag_search]}"
+  end
+
+  get '/tags/:tag_search' do
+    @links_with_tag = Link.all(:tags => params[:tag_search])
+    p params[:tag_search]
+    p Link.all
+    p @links_with_tag
+
+    erb(:tag_name)
+  end
+
   post '/links' do
     link = Link.create(title: params[:title], url: params[:url])
     link.tags << Tag.create(name: params[:tag])

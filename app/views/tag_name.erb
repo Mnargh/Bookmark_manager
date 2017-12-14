@@ -1,0 +1,7 @@
+<ul>
+  <% @links_with_tag.each_with_index do |link, index|%>
+  <li>
+    <%=index+1%>: <a href = "<%=link.url%>"><%=link.title%></a>
+  </li>
+  <%end%>
+</ul>

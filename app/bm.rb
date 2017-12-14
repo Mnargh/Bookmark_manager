@@ -24,8 +24,12 @@ class BM < Sinatra::Base
 
   post '/links' do
     link = Link.create(title: params[:title], url: params[:url])
-    link.tags << Tag.create(name: params[:tag])
-    link.save #have to save after appending in a many to many relationship
+    params[:tag].split(" ").each do |tag|
+      link.tags << Tag.first_or_create(name: tag)
+ #have to save after appending in a many to many relationship
+    end
+
+    link.save
     redirect '/links'
   end
 

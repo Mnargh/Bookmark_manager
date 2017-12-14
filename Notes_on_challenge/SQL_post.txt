@@ -27,7 +27,7 @@ Using SQL you can: i)Create: 1)
                               This deletes Newname from the table
                                 2)
                               DROP DATABASE example_database;
-                              This deletes a datebase
+                              This deletes a database
                   EXTRA -- switching between databases \c example_database;
 
                    This is the CRUD Concept applied with SQL

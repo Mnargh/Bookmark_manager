@@ -2,18 +2,6 @@ require 'pry'
 
 feature "searching for tags" do
   scenario "choosing which tag to search for in links" do
-    # visit '/links/new'
-    # fill_in :title, with: 'Sky Sports'
-    # fill_in :url, with: 'http://www.skysports.com'
-    # fill_in :tag, with: 'Entertainment'
-    # click_on "Add Bookmark"
-
-    # visit '/links/new'
-    # fill_in :title, with: 'Sky Sports'
-    # fill_in :url, with: 'http://www.sky.co.uk/sport'
-    # fill_in :tag, with: 'Sport'
-    # click_on "Add Bookmark"
-
     add_sky_sports
     add_link_with_sports_tag
     click_on "Add Bookmark"

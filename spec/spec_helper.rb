@@ -4,6 +4,7 @@ require 'rspec'
 require_relative './features/web_helpers'
 require 'capybara/rspec'
 require 'database_cleaner'
+require 'pry'
 require File.join(File.dirname(__FILE__), '..', 'app/bm.rb')
 Capybara.app = BM
 require './app/models/link'

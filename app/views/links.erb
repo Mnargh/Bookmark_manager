@@ -6,6 +6,7 @@
   <%@links.each_with_index do |link, index|%>
   <li>
     <%=index+1%>: <a href = "<%=link.url%>"><%=link.title%></a>
+    <%=link.tags.map(&:name)%>
   </li>
   <%end%>
 </ul>

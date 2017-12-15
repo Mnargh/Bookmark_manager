@@ -12,6 +12,7 @@ gem 'rubocop'
 gem 'selenium-webdriver'
 gem 'shotgun'
 gem 'rake'
+gem 'bcrypt'
 
 group :test do
   gem 'database_cleaner'

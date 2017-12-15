@@ -11,6 +11,7 @@ gem 'rspec'
 gem 'rubocop'
 gem 'selenium-webdriver'
 gem 'shotgun'
+gem 'rake'
 
 group :test do
   gem 'database_cleaner'
